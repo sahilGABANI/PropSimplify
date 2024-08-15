@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".app.ui.propy.lifestyle.LifeStyleFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLifeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10ssp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_13sdp"/>
+
+</LinearLayout>

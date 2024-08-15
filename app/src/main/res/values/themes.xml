@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PropSimplify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">#F68BCC</item>
+        <item name="colorSecondaryVariant">#F68BCC</item>
+        <item name="colorOnSecondary">#F68BCC</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="BSDialogThemeRegular" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="behavior_draggable">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorAccent">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="NewHomeReelsTabLayoutTextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

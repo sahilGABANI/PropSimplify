@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/_150sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewUpper"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Find your ideal property,\n not just listing"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="0.02"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:text="An AI-drive platform transforming the buyer’s property search and transaction experience"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#969AA8"
+            android:textSize="@dimen/_10ssp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center"
+            android:minHeight="@dimen/_48sdp"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.05"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/get_started"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_10ssp"
+            app:cornerRadius="@dimen/_8sdp"
+            app:iconGravity="textEnd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:text="By clicking Agree or Continue, you agree to PropSimplify User Agreement,  Privacy Policy and Terms of use"
+            android:fontFamily="@font/poppins_regular"
+            android:letterSpacing="0.02"
+            android:textColor="#969AA8"
+            android:textSize="@dimen/_9ssp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >

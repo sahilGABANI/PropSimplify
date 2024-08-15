@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/_10ssp"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    tools:context=".app.ui.propy.budget.BudgetFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/ic_budget_robot" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:text="@string/label_what_is_your_budget"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text="@string/label_25_of_our_users_looking_property_in_that_range"
+            android:textColor="#595B64"
+            android:textSize="@dimen/_12ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_minus36sdp"
+                android:src="@drawable/ic_graph" />
+
+            <com.propsimlify.app.utils.rengepicker.RangeSeekBar
+                android:id="@+id/rangeBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsb_gravity="center"
+                app:rsb_max="100000"
+                app:rsb_min="1000"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@color/colorPrimary"
+                app:rsb_progress_height="@dimen/_5sdp"
+                app:rsb_thumb_width="@dimen/_20sdp"
+                app:rsb_thumb_height="@dimen/_20sdp"
+                app:rsb_thumb_drawable="@drawable/thumb_activated"
+                app:rsb_thumb_inactivated_drawable="@drawable/thumb_inactivated" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.propsimlify.app.utils.rengepicker.RangeSeekBar
+                android:id="@+id/range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsb_gravity="center"
+                app:rsb_max="110000"
+                app:rsb_min="10000"
+                app:rsb_mode="range"
+                android:layout_marginTop="@dimen/_minus34sdp"
+                app:rsb_progress_color="@color/colorPrimary"
+                app:rsb_progress_radius="@dimen/_10sdp"
+                app:rsb_progress_default_color="@color/colorChartUnselected"
+                app:rsb_progress_height="@dimen/_5sdp"
+                app:rsb_thumb_width="@dimen/_20sdp"
+                app:rsb_thumb_height="@dimen/_20sdp"
+                app:rsb_thumb_drawable="@drawable/thumb_activated"
+                app:rsb_thumb_inactivated_drawable="@drawable/thumb_inactivated" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:strokeColor="#C4C7D7"
+                app:strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_minimum"
+                        android:textColor="#CC595B64"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_aed"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/minimumPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@color/colorFullTransparent"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:imeOptions="actionDone"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="10000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:strokeColor="#C4C7D7"
+                app:strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_maximum"
+                        android:textColor="#CC595B64"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_aed"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/maximumPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@color/colorFullTransparent"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:imeOptions="actionDone"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="100000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

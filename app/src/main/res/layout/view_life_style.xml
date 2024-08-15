@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/liveDestinationBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/bg_lifestyle_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPlace"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_investment"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investment"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

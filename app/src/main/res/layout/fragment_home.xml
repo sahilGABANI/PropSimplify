@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".app.ui.main.home.HomeFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:background="@drawable/bg_sreach"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSearch"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_search" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@color/colorFullTransparent"
+                            android:gravity="center_vertical"
+                            android:hint="@string/label_search"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textCapSentences"
+                            android:lines="1"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:textColor="#717180"
+                            android:textColorHint="#717180"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAIButton"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:padding="@dimen/_10ssp"
+                        android:src="@drawable/iv_ai_button"/>
+
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVenueCategoryList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/view_home_post_catgory" />
+
+
+            </LinearLayout>
+
+            <com.yuyakaido.android.cardstackview.CardStackView
+                android:id="@+id/homeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</FrameLayout>
